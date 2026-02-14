@@ -32,8 +32,8 @@ $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
 $out = Join-Path $OutDir ("home-" + $stamp + ".png")
 
 # Chromium headless on locked-down Windows machines can fail with sandbox ACL operations.
-# Use a temp profile dir (more likely to allow required sandbox files/ACLs).
-$profile = Join-Path $env:TEMP ("maitri-shot-profile-" + $stamp)
+# Use a repo-local profile dir to avoid corporate TEMP/AppContainer ACL issues.
+$profile = Join-Path $OutDir ("profile-" + $stamp)
 New-Item -ItemType Directory -Force -Path $profile | Out-Null
 
 # Note: if the page depends on fonts loading, you can add a longer virtual-time budget.
@@ -43,10 +43,10 @@ $common = @(
   "--no-first-run",
   "--no-default-browser-check",
   "--disable-crash-reporter",
-  "--disable-features=Crashpad",
-  "--disable-features=NetworkServiceSandbox",
+  "--disable-features=Crashpad,NetworkServiceSandbox,WinSboxAppContainer,RendererAppContainer,NetworkService",
   "--disable-background-networking",
   "--no-sandbox",
+  "--disable-dev-shm-usage",
   "--disable-breakpad",
   "--virtual-time-budget=2500",
   "--window-size=1440,900",
@@ -59,6 +59,10 @@ $common = @(
 & $bin @("--headless=new") @common | Out-Null
 if (-not (Test-Path $out)) {
   & $bin @("--headless") @common | Out-Null
+}
+
+if (-not (Test-Path $out)) {
+  throw "Screenshot failed: file was not created at $out"
 }
 
 Write-Output $out
