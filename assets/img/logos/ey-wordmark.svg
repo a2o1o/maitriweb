@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-label="EY">
+  <title>EY</title>
+  <rect width="360" height="120" fill="none"/>
+  <g>
+    <polygon points="30,26 158,10 144,28 30,44" fill="#f2b99b"/>
+    <text x="30" y="92" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="92" font-weight="900" fill="#1a1612" letter-spacing="-.02em">
+      EY
+    </text>
+  </g>
+</svg>
+

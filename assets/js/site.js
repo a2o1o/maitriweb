@@ -1,0 +1,40 @@
+﻿(() => {
+  // Used by CSS to apply animations only when JS is running.
+  document.documentElement.classList.add('js');
+
+  const topbar = document.querySelector('.topbar');
+  const hamb = document.querySelector('[data-hamb]');
+  if (hamb && topbar) {
+    hamb.addEventListener('click', () => {
+      const open = topbar.classList.toggle('open');
+      hamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  const path = (location.pathname || '').toLowerCase();
+  const file = path.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[data-nav]').forEach((a) => {
+    const href = (a.getAttribute('href') || '').toLowerCase();
+    if (href === file) a.classList.add('active');
+  });
+
+  const els = Array.from(document.querySelectorAll('.reveal'));
+  if ('IntersectionObserver' in window && els.length) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+
+    els.forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i * 45, 220)}ms`;
+      io.observe(el);
+    });
+  } else {
+    els.forEach((el) => el.classList.add('in'));
+  }
+})();
+
