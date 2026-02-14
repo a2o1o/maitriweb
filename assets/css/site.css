@@ -195,8 +195,9 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
     url("../img/hero-girls.jpg");
   background-size: auto, auto, auto, auto, cover;
   /* Push the photo slightly up so faces land in the hero band. */
-  background-position: center, center, center, center, center 42%;
-  filter: saturate(1.10) contrast(1.08);
+  /* Bias right to feature a single strong subject (Nudge-style composition). */
+  background-position: center, center, center, center, 80% 52%;
+  filter: saturate(1.12) contrast(1.10);
   transform: scale(1.02);
   z-index: 0;
   pointer-events: none;
