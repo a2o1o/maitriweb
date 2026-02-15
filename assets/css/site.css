@@ -335,17 +335,19 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   align-items: center;
 }
 .logo-wall{
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
   align-items: center;
-  justify-content: end;
+  justify-items: center;
 }
 .logo-wall .logo{
-  height: 34px;
+  height: 30px;
   width: auto;
-  opacity: .92;
+  max-width: 100%;
+  opacity: .88;
   filter: saturate(0);
+  transition: opacity .2s, filter .2s;
 }
 .logo-wall .logo:hover{
   opacity: 1;
@@ -920,7 +922,7 @@ html.js .reveal.in{
   .hero-grid{ grid-template-columns: 1fr; }
   .hero-grid--solo{ max-width: none; }
   .cred-inner{ grid-template-columns: 1fr; }
-  .logo-wall{ justify-content: start; }
+  .logo-wall{ grid-template-columns: repeat(3, auto); justify-content: start; gap: 18px; }
   .mosaic{ grid-template-columns: 1fr; }
   .mosaic-right{ grid-template-rows: auto; grid-template-columns: 1fr 1fr; }
   .hero-bleed{ padding: 88px 0 28px; }
