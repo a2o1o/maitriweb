@@ -192,11 +192,11 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
     radial-gradient(900px 620px at 85% 18%, rgba(106,167,200,.30), transparent 62%),
     radial-gradient(820px 620px at 70% 88%, rgba(240,176,192,.30), transparent 62%),
     linear-gradient(180deg, rgba(254,244,246,1) 0%, rgba(254,244,246,.55) 32%, rgba(36,22,27,.20) 100%),
-    url("../img/hero-focus.jpg");
+    url("../img/hero/hero-mentoring.jpg");
   background-size: auto, auto, auto, auto, cover;
   /* Push the photo slightly up so faces land in the hero band. */
   /* Bias right to feature a single strong subject (Nudge-style composition). */
-  background-position: center, center, center, center, 68% 38%;
+  background-position: center, center, center, center, 50% 45%;
   filter: saturate(1.12) contrast(1.10);
   transform: scale(1.02);
   z-index: 0;
