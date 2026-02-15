@@ -731,5 +731,13 @@ html.js .reveal.in{
     padding: 0 var(--pad) 12px;
   }
   .topbar.open nav a{ padding: 10px 10px; }
-  .nav-cta{ display: none; }
+  .topbar:not(.open) .nav-cta{ display: none; }
+  .topbar.open .topbar-inner{ flex-wrap: wrap; }
+  .topbar.open .nav-cta{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0 var(--pad) 12px;
+  }
 }
