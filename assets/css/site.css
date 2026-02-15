@@ -842,6 +842,24 @@ footer{
   background: linear-gradient(135deg, var(--accent-3), var(--accent-4));
 }
 
+/* Card with poster image at top */
+.card--poster{
+  padding: 0;
+  overflow: hidden;
+}
+.card--poster .poster{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.card--poster .card-body{
+  padding: 14px 18px 18px;
+}
+.card--poster .cap{ margin-bottom: 2px; }
+.card--poster h3{ margin: 6px 0 6px; font-size: 17px; }
+
 /* Community photo banner */
 .community-banner{
   border-radius: var(--radius-lg);
