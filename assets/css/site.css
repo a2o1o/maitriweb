@@ -229,23 +229,11 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
 }
 
 .hl{
-  display: inline-block;
-  padding: 6px 10px 7px;
-  border-radius: 12px;
-  background: rgba(255,255,255,.18);
-  border: 1px solid rgba(255,255,255,.18);
-  backdrop-filter: blur(10px);
+  display: inline;
 }
 .hl.em{
   font-style: italic;
-  background: rgba(255,255,255,.26);
 }
-.hero-onimg .hl{
-  /* In the hero, keep contrast high: dark glass behind white text. */
-  background: rgba(0,0,0,.22);
-  border-color: rgba(255,255,255,.16);
-}
-.hero-onimg .hl.em{ background: rgba(0,0,0,.28); }
 .hero-onimg .btn{
   border-color: rgba(255,255,255,.18);
   background: rgba(255,255,255,.12);
