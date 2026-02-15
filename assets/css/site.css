@@ -561,7 +561,21 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
 
 /* Sections */
 .section{
-  padding: 26px 0;
+  padding: 40px 0;
+}
+.section + .section{
+  border-top: 1px solid rgba(36,22,27,.06);
+}
+.section--alt{
+  margin-left: calc(-1 * var(--pad));
+  margin-right: calc(-1 * var(--pad));
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+  background:
+    radial-gradient(800px 400px at 30% 20%, rgba(242,185,155,.06), transparent 60%),
+    radial-gradient(600px 400px at 80% 80%, rgba(132,182,200,.06), transparent 55%),
+    rgba(254,244,246,.4);
+  border-radius: var(--radius-lg);
 }
 .section-head{
   display: flex;
@@ -853,7 +867,7 @@ footer{
   width: 100%;
   height: 200px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 28%;
   display: block;
 }
 .card--poster .card-body{
@@ -901,6 +915,80 @@ footer{
   gap: 14px;
 }
 
+/* Chart display — larger images for data viz */
+.chart-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.chart-grid .imgcard img{
+  max-height: none;
+  height: auto;
+  padding: 14px;
+  object-fit: contain;
+}
+
+/* Tip list for contact page */
+.tip-list{
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+.tip-list li{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13.5px;
+  color: rgba(26,22,18,.72);
+  line-height: 1.55;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(36,22,27,.06);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.tip-list li:last-child{ border-bottom: none; }
+.tip-list .tip-icon{
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Donate highlights */
+.highlight-strip{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.highlight-strip .hs-item{
+  background: rgba(255,255,255,.76);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 18px;
+  text-align: center;
+}
+.highlight-strip .hs-amount{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 850;
+  font-size: 24px;
+  color: var(--accent);
+  letter-spacing: -.02em;
+}
+.highlight-strip .hs-label{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: rgba(26,22,18,.66);
+  margin-top: 6px;
+}
+
 /* Animations */
 .reveal{
   /* Progressive enhancement: content must remain readable even if JS fails. */
@@ -944,6 +1032,8 @@ html.js .reveal.in{
   .statrow--standalone{ grid-template-columns: repeat(2, 1fr); }
   .steps{ grid-template-columns: 1fr; }
   .grid4{ grid-template-columns: repeat(2, 1fr); }
+  .chart-grid{ grid-template-columns: 1fr; }
+  .section--alt{ margin-left: 0; margin-right: 0; padding-left: var(--pad); padding-right: var(--pad); border-radius: 0; }
   .community-banner img{ height: 160px; }
   .topbar:not(.open) .nav-cta{ display: none; }
   .topbar.open .topbar-inner{ flex-wrap: wrap; }
