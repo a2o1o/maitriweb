@@ -1,6 +1,6 @@
 _shots/
+_gcloud_ssh/
 *.log
 *.tmp
 Thumbs.db
 .DS_Store
-
