@@ -1,4 +1,4 @@
-:root{
+﻿:root{
   /* Maitri palette (derived from the brand artwork found in Sakhi logo file) */
   --bg: #fef4f6;
   --ink: #24161b;
@@ -324,16 +324,17 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
 }
 .logo-wall{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 18px;
   align-items: center;
   justify-items: center;
 }
 .logo-wall .logo{
-  height: 30px;
+  height: 34px;
+  max-width: 180px;
   width: auto;
-  max-width: 100%;
-  opacity: .88;
+  display: block;
+  opacity: .92;
   filter: saturate(0);
   transition: opacity .2s, filter .2s;
 }
@@ -1033,3 +1034,4 @@ html.js .reveal.in{
     padding: 0 var(--pad) 12px;
   }
 }
+
