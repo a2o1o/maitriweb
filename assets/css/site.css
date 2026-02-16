@@ -670,6 +670,44 @@ body.page-programs .card p{
   font-size: 14px;
 }
 
+/* Main page typography tuned to Pratham-like scale
+   (keep hero headline + hero sub-headline unchanged). */
+body.page-home{
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+  color: #666;
+}
+body.page-home .h2,
+body.page-home h3,
+body.page-home .sub,
+body.page-home .card p,
+body.page-home .chip,
+body.page-home .btn,
+body.page-home nav a,
+body.page-home .brand-title,
+body.page-home .brand-sub,
+body.page-home .kicker,
+body.page-home .cap,
+body.page-home p{
+  font-family: "Open Sans", sans-serif;
+}
+body.page-home .h2{
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+body.page-home h3{
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+body.page-home .sub,
+body.page-home .card p,
+body.page-home p{
+  font-size: 14px;
+}
+
 /* How-Maitri carousel */
 .how-carousel{
   position: relative;
