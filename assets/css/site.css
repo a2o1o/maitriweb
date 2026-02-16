@@ -197,12 +197,12 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
     radial-gradient(820px 620px at 70% 88%, rgba(240,176,192,.20), transparent 62%),
     linear-gradient(180deg, rgba(254,244,246,.76) 0%, rgba(254,244,246,.30) 30%, rgba(36,22,27,.10) 100%),
     url("../img/hero/hero-mentoring.jpg");
-  background-size: auto, auto, auto, auto, cover;
+  background-size: auto, auto, auto, auto, 100% auto;
   /* Push the photo slightly up so faces land in the hero band. */
   /* Bias right to feature a single strong subject (Nudge-style composition). */
-  background-position: center, center, center, center, 50% 45%;
+  background-position: center, center, center, center, 50% 40%;
   filter: saturate(1.18) contrast(1.18) brightness(1.05);
-  transform: scale(1.02);
+  transform: scale(1);
   z-index: 0;
   pointer-events: none;
 }
@@ -1422,6 +1422,10 @@ html.js .reveal.in{
     text-align: center;
   }
   .loop-arrow{ display: none; }
+  .hero-bleed::before{
+    background-size: auto, auto, auto, auto, cover;
+    background-position: center, center, center, center, 52% 42%;
+  }
 }
 
 
