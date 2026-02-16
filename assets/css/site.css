@@ -1140,6 +1140,12 @@ footer{
   font-style: italic;
 }
 
+.testimonials-list{
+  margin-top: 14px;
+  display: grid;
+  gap: 14px;
+}
+
 /* Testimonial card pattern */
 .testimonial-card{
   display: flex;
@@ -1148,6 +1154,8 @@ footer{
   background: #fff;
   padding: 28px;
   border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
 }
 .testimonial-image img{
   width: 120px;
@@ -1168,6 +1176,7 @@ footer{
   margin-top: 10px;
   font-weight: 600;
   text-decoration: none;
+  color: var(--accent);
 }
 
 .podcast-links{
