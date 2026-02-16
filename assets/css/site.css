@@ -1212,6 +1212,46 @@ footer{
   background: #f8eef3;
 }
 
+/* Homepage narrative restructure helpers */
+.section-divider{
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(216, 76, 135, 0.55),
+    rgba(240, 122, 107, 0.55),
+    rgba(242, 200, 75, 0.55),
+    rgba(79, 167, 181, 0.55),
+    rgba(140, 122, 200, 0.55)
+  );
+  margin: 48px 0;
+  border-radius: 999px;
+}
+.loop-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.loop-node{
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: rgba(255,255,255,.82);
+  box-shadow: var(--shadow-soft);
+  font-size: 14px;
+  font-weight: 700;
+}
+.loop-arrow{
+  color: rgba(36,22,27,.58);
+  font-weight: 700;
+}
+.proof-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,247,252,.82));
+}
+
 /* Team grid (2x2) */
 .grid4{
   display: grid;
@@ -1357,6 +1397,7 @@ html.js .reveal.in{
     flex-direction: column;
     text-align: center;
   }
+  .loop-arrow{ display: none; }
 }
 
 
