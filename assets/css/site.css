@@ -34,7 +34,9 @@ body{
     radial-gradient(1000px 820px at 50% 105%, rgba(211,121,149,.14), transparent 60%),
     linear-gradient(180deg, #ffffff 0%, var(--bg) 45%, #ffffff 100%);
   font-family: "Open Sans", sans-serif;
-  line-height: 1.45;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.66;
 }
 
 a{ color: inherit; text-decoration: none; }
@@ -131,7 +133,7 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   gap: 10px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   border-radius: 999px;
   padding: 10px 14px;
   border: 1px solid var(--line);
@@ -230,7 +232,7 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   box-shadow: 0 26px 70px rgba(0,0,0,.22);
 }
 .hero-panel .h1{
-  font-size: clamp(30px, 3.3vw, 46px);
+  font-size: clamp(32px, 4.8vw, 48px);
   line-height: 1.08;
 }
 
@@ -465,10 +467,10 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
 }
 .h1{
   margin: 14px 0 12px;
-  font-size: clamp(34px, 4vw, 52px);
+  font-size: clamp(32px, 4.8vw, 48px);
   line-height: 1.04;
   letter-spacing: -.02em;
-  font-weight: 780;
+  font-weight: 700;
 }
 .lead{
   font-size: 16px;
@@ -581,13 +583,14 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
 }
 .h2{
   margin: 0;
-  font-size: 24px;
+  font-size: clamp(30px, 3vw, 34px);
   letter-spacing: -.01em;
+  font-weight: 700;
 }
 .sub{
   font-family: "Open Sans", sans-serif;
   color: rgba(26,22,18,.66);
-  font-size: 13px;
+  font-size: 16px;
   max-width: 70ch;
 }
 .grid3{
@@ -674,8 +677,8 @@ body.page-programs .card p{
    (keep hero headline + hero sub-headline unchanged). */
 body.page-home{
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.58;
+  font-size: 16px;
+  line-height: 1.66;
   color: #666;
 }
 body.page-home .h2,
@@ -693,19 +696,21 @@ body.page-home p{
   font-family: "Open Sans", sans-serif;
 }
 body.page-home .h2{
-  font-size: 20px;
+  font-size: clamp(30px, 3vw, 34px);
   line-height: 1.35;
-  font-weight: 600;
+  font-weight: 700;
 }
 body.page-home h3{
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.4;
   font-weight: 600;
 }
 body.page-home .sub,
 body.page-home .card p,
 body.page-home p{
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.66;
+  font-weight: 400;
 }
 
 /* Home: What is Maitri / Vision / Mission styling */
@@ -1135,6 +1140,36 @@ footer{
   font-style: italic;
 }
 
+/* Testimonial card pattern */
+.testimonial-card{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+}
+.testimonial-image img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.testimonial-quote{
+  font-size: 16px;
+  line-height: 1.6;
+}
+.testimonial-name{
+  margin-top: 10px;
+  font-weight: 600;
+}
+.testimonial-link{
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .podcast-links{
   margin-top: 18px;
   border: 1px solid var(--line);
@@ -1309,6 +1344,10 @@ html.js .reveal.in{
 
 @media (max-width: 640px){
   .quote-grid{ grid-template-columns: 1fr; }
+  .testimonial-card{
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
