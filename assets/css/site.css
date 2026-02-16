@@ -227,6 +227,10 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   backdrop-filter: blur(10px);
   box-shadow: 0 26px 70px rgba(0,0,0,.22);
 }
+.hero-panel .h1{
+  font-size: clamp(30px, 3.3vw, 46px);
+  line-height: 1.08;
+}
 
 .hl{
   display: inline;
