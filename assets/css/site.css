@@ -708,6 +708,75 @@ body.page-home p{
   font-size: 14px;
 }
 
+/* Home: What is Maitri / Vision / Mission styling */
+.maitri-identity .section-head{ margin-bottom: 12px; }
+.identity-panel{
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(18px, 2.2vw, 28px);
+  background:
+    radial-gradient(1200px 260px at -5% -45%, rgba(208,112,149,.13), transparent 50%),
+    radial-gradient(900px 220px at 105% 130%, rgba(132,182,200,.12), transparent 48%),
+    linear-gradient(180deg, #fff, #fff8fb);
+  box-shadow: var(--shadow-soft);
+}
+.identity-panel .identity-kicker{
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(58,47,54,.72);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(138,108,124,.25);
+  background: rgba(255,255,255,.8);
+  margin-bottom: 10px;
+}
+.identity-panel p{
+  margin: 0 0 14px;
+  max-width: 980px;
+  color: rgba(33,27,31,.86);
+}
+.vm-grid{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.vm-card{
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 16px 15px 18px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+.vm-card:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 999px;
+}
+.vm-card--vision:before{ background: var(--accent); }
+.vm-card--mission:before{ background: var(--accent-2); }
+.vm-label{
+  margin-left: 8px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(58,47,54,.68);
+}
+.vm-card p{
+  margin: 8px 0 0 8px;
+  color: rgba(33,27,31,.86);
+}
+@media (max-width: 820px){
+  .vm-grid{ grid-template-columns: 1fr; }
+}
+
 /* How-Maitri carousel */
 .how-carousel{
   position: relative;
