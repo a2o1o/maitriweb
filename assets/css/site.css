@@ -192,16 +192,16 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   position:absolute;
   inset:0;
   background:
-    radial-gradient(1100px 680px at 18% 12%, rgba(224,160,176,.42), transparent 60%),
-    radial-gradient(900px 620px at 85% 18%, rgba(106,167,200,.30), transparent 62%),
-    radial-gradient(820px 620px at 70% 88%, rgba(240,176,192,.30), transparent 62%),
-    linear-gradient(180deg, rgba(254,244,246,1) 0%, rgba(254,244,246,.55) 32%, rgba(36,22,27,.20) 100%),
+    radial-gradient(1100px 680px at 18% 12%, rgba(224,160,176,.28), transparent 60%),
+    radial-gradient(900px 620px at 85% 18%, rgba(106,167,200,.22), transparent 62%),
+    radial-gradient(820px 620px at 70% 88%, rgba(240,176,192,.20), transparent 62%),
+    linear-gradient(180deg, rgba(254,244,246,.76) 0%, rgba(254,244,246,.30) 30%, rgba(36,22,27,.10) 100%),
     url("../img/hero/hero-mentoring.jpg");
   background-size: auto, auto, auto, auto, cover;
   /* Push the photo slightly up so faces land in the hero band. */
   /* Bias right to feature a single strong subject (Nudge-style composition). */
   background-position: center, center, center, center, 50% 45%;
-  filter: saturate(1.12) contrast(1.10);
+  filter: saturate(1.18) contrast(1.18) brightness(1.05);
   transform: scale(1.02);
   z-index: 0;
   pointer-events: none;
@@ -212,9 +212,9 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   inset:0;
   background:
     /* Keep left edge readable while letting the photo show through. */
-    linear-gradient(90deg, rgba(26,16,20,.38) 0%, rgba(26,16,20,.16) 58%, rgba(26,16,20,.04) 100%),
-    radial-gradient(900px 520px at 18% 12%, rgba(208,64,112,.22), transparent 62%),
-    linear-gradient(180deg, rgba(26,16,20,.34) 0%, rgba(26,16,20,.14) 58%, rgba(254,244,246,.06) 100%);
+    linear-gradient(90deg, rgba(26,16,20,.28) 0%, rgba(26,16,20,.10) 58%, rgba(26,16,20,.02) 100%),
+    radial-gradient(900px 520px at 18% 12%, rgba(208,64,112,.16), transparent 62%),
+    linear-gradient(180deg, rgba(26,16,20,.24) 0%, rgba(26,16,20,.10) 58%, rgba(254,244,246,.04) 100%);
   z-index: 1;
   pointer-events: none;
 }
