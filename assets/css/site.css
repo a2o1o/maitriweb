@@ -1252,6 +1252,30 @@ footer{
   background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,247,252,.82));
 }
 
+/* Impact metrics animation helpers */
+.metric{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+}
+.impact-count,
+.impact-suffix,
+.metric-static{
+  font-size: 28px;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+}
+.metric-label{
+  width: 100%;
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(26,22,18,.68);
+  font-weight: 400;
+}
+
 /* Team grid (2x2) */
 .grid4{
   display: grid;
