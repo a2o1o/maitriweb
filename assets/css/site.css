@@ -192,17 +192,17 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   position:absolute;
   inset:0;
   background:
-    radial-gradient(1100px 680px at 18% 12%, rgba(224,160,176,.42), transparent 60%),
-    radial-gradient(900px 620px at 85% 18%, rgba(106,167,200,.30), transparent 62%),
-    radial-gradient(820px 620px at 70% 88%, rgba(240,176,192,.30), transparent 62%),
-    linear-gradient(180deg, rgba(254,244,246,1) 0%, rgba(254,244,246,.55) 32%, rgba(36,22,27,.20) 100%),
+    radial-gradient(1100px 680px at 18% 12%, rgba(224,160,176,.28), transparent 60%),
+    radial-gradient(900px 620px at 85% 18%, rgba(106,167,200,.22), transparent 62%),
+    radial-gradient(820px 620px at 70% 88%, rgba(240,176,192,.20), transparent 62%),
+    linear-gradient(180deg, rgba(254,244,246,.76) 0%, rgba(254,244,246,.30) 30%, rgba(36,22,27,.10) 100%),
     url("../img/hero/hero-mentoring.jpg");
-  background-size: auto, auto, auto, auto, cover;
+  background-size: auto, auto, auto, auto, 100% auto;
   /* Push the photo slightly up so faces land in the hero band. */
   /* Bias right to feature a single strong subject (Nudge-style composition). */
-  background-position: center, center, center, center, 50% 45%;
-  filter: saturate(1.12) contrast(1.10);
-  transform: scale(1.02);
+  background-position: center, center, center, center, 50% 40%;
+  filter: saturate(1.18) contrast(1.18) brightness(1.05);
+  transform: scale(1);
   z-index: 0;
   pointer-events: none;
 }
@@ -212,9 +212,9 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   inset:0;
   background:
     /* Keep left edge readable while letting the photo show through. */
-    linear-gradient(90deg, rgba(26,16,20,.38) 0%, rgba(26,16,20,.16) 58%, rgba(26,16,20,.04) 100%),
-    radial-gradient(900px 520px at 18% 12%, rgba(208,64,112,.22), transparent 62%),
-    linear-gradient(180deg, rgba(26,16,20,.34) 0%, rgba(26,16,20,.14) 58%, rgba(254,244,246,.06) 100%);
+    linear-gradient(90deg, rgba(26,16,20,.28) 0%, rgba(26,16,20,.10) 58%, rgba(26,16,20,.02) 100%),
+    radial-gradient(900px 520px at 18% 12%, rgba(208,64,112,.16), transparent 62%),
+    linear-gradient(180deg, rgba(26,16,20,.24) 0%, rgba(26,16,20,.10) 58%, rgba(254,244,246,.04) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -1212,6 +1212,156 @@ footer{
   background: #f8eef3;
 }
 
+/* Homepage narrative restructure helpers */
+.section-divider{
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(216, 76, 135, 0.55),
+    rgba(240, 122, 107, 0.55),
+    rgba(242, 200, 75, 0.55),
+    rgba(79, 167, 181, 0.55),
+    rgba(140, 122, 200, 0.55)
+  );
+  margin: 48px 0;
+  border-radius: 999px;
+}
+.loop-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.loop-node{
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: rgba(255,255,255,.82);
+  box-shadow: var(--shadow-soft);
+  font-size: 14px;
+  font-weight: 700;
+}
+.loop-arrow{
+  color: rgba(36,22,27,.58);
+  font-weight: 700;
+}
+.proof-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,247,252,.82));
+}
+
+/* Impact metrics animation helpers */
+.metric{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+}
+.impact-count,
+.impact-suffix,
+.metric-static{
+  font-size: 28px;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+}
+.metric-label{
+  width: 100%;
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(26,22,18,.68);
+  font-weight: 400;
+}
+
+/* Partners page rolling logos */
+.partner-marquee{
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.84);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  padding: 12px 0;
+}
+.partner-track{
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  padding: 0 12px;
+  animation: partner-scroll 34s linear infinite;
+}
+.partner-item{
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 12px;
+}
+.partner-item img{
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+.partner-item span{
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(26,22,18,.78);
+}
+.partner-marquee:hover .partner-track{
+  animation-play-state: paused;
+}
+@keyframes partner-scroll{
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Recognition casebook media */
+.logo-wall--recognition{
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 14px 18px;
+}
+.page-home .cred-inner{
+  grid-template-columns: 1.1fr .75fr .95fr;
+}
+.logo-wall .logo.logo--summit{
+  height: 42px;
+  max-width: 160px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.recog-media{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.recog-figure{
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,.86);
+  box-shadow: var(--shadow-soft);
+}
+.recog-figure img{
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+.recog-figure figcaption{
+  padding: 8px 10px;
+  font-size: 12px;
+  color: rgba(26,22,18,.7);
+}
+
 /* Team grid (2x2) */
 .grid4{
   display: grid;
@@ -1356,6 +1506,11 @@ html.js .reveal.in{
   .testimonial-card{
     flex-direction: column;
     text-align: center;
+  }
+  .loop-arrow{ display: none; }
+  .hero-bleed::before{
+    background-size: auto, auto, auto, auto, cover;
+    background-position: center, center, center, center, 52% 42%;
   }
 }
 

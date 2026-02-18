@@ -88,6 +88,47 @@
       start();
     }
   }
+
+  // Impact rolling count-up (homepage proof section).
+  const impactCounts = Array.from(document.querySelectorAll('.impact-count[data-target]'));
+  if (impactCounts.length) {
+    const animateCount = (el) => {
+      const target = Number(el.getAttribute('data-target') || '0');
+      if (!Number.isFinite(target) || target <= 0) return;
+      const duration = 1300;
+      const startTime = performance.now();
+
+      const tick = (now) => {
+        const elapsed = now - startTime;
+        const p = Math.min(1, elapsed / duration);
+        const value = Math.floor(target * p);
+        el.textContent = String(value);
+        if (p < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = String(target);
+        }
+      };
+
+      requestAnimationFrame(tick);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const seen = new WeakSet();
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          if (seen.has(el)) return;
+          seen.add(el);
+          animateCount(el);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.4 });
+
+      impactCounts.forEach((el) => io.observe(el));
+    }
+  }
 })();
 
 
