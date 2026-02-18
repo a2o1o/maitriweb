@@ -1276,6 +1276,52 @@ footer{
   font-weight: 400;
 }
 
+/* Partners page rolling logos */
+.partner-marquee{
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.84);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  padding: 12px 0;
+}
+.partner-track{
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  padding: 0 12px;
+  animation: partner-scroll 34s linear infinite;
+}
+.partner-item{
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 12px;
+}
+.partner-item img{
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+.partner-item span{
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(26,22,18,.78);
+}
+.partner-marquee:hover .partner-track{
+  animation-play-state: paused;
+}
+@keyframes partner-scroll{
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Recognition casebook media */
 .logo-wall--recognition{
   grid-template-columns: repeat(3, auto);
