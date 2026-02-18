@@ -1303,10 +1303,12 @@ footer{
   padding: 10px 12px;
 }
 .partner-item img{
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  object-fit: cover;
+  width: 120px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
   display: block;
 }
 .partner-item span{
