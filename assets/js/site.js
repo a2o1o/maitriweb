@@ -37,9 +37,9 @@
     els.forEach((el) => el.classList.add('in'));
   }
 
-  // Lightweight carousel used on Programs -> "How Maitri works".
-  const carousel = document.querySelector('[data-how-carousel]');
-  if (carousel) {
+  // Lightweight carousel used on Programs and Homepage sections.
+  const carousels = Array.from(document.querySelectorAll('[data-how-carousel]'));
+  carousels.forEach((carousel) => {
     const track = carousel.querySelector('[data-how-track]');
     const slides = track ? Array.from(track.querySelectorAll('.how-slide')) : [];
     const prev = carousel.querySelector('[data-how-prev]');
@@ -87,7 +87,7 @@
       render();
       start();
     }
-  }
+  });
 
   // Impact rolling count-up (homepage proof section).
   const impactCounts = Array.from(document.querySelectorAll('.impact-count[data-target]'));
