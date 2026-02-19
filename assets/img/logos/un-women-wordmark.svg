@@ -1,17 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" role="img" aria-label="UN Women">
   <title>UN Women</title>
   <rect width="560" height="120" fill="none"/>
-  <g fill="#1a1612">
+  <g fill="#00A3E0">
     <text x="0" y="64" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="56" font-weight="800" letter-spacing=".02em">
       UN
     </text>
     <text x="140" y="64" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="56" font-weight="800" letter-spacing=".01em">
       Women
     </text>
-    <rect x="0" y="84" width="520" height="2" opacity=".16"/>
-    <text x="0" y="110" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600" opacity=".72" letter-spacing=".08em">
+    <rect x="0" y="84" width="520" height="2" opacity=".22"/>
+    <text x="0" y="110" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600" opacity=".9" letter-spacing=".08em">
       UNITED NATIONS
     </text>
   </g>
 </svg>
-

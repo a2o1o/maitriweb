@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" role="img" aria-label="MeitY">
   <title>MeitY</title>
   <rect width="560" height="120" fill="none"/>
-  <g fill="#1a1612">
+  <g fill="#FF8A00">
     <text x="0" y="66" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="60" font-weight="850" letter-spacing=".01em">
       MeitY
     </text>
-    <text x="0" y="108" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="650" opacity=".72" letter-spacing=".06em">
+    <text x="0" y="108" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#1A5FB4" letter-spacing=".06em">
       MINISTRY OF ELECTRONICS AND IT
     </text>
   </g>
 </svg>
-
