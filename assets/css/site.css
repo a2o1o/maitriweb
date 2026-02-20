@@ -824,15 +824,15 @@ body.page-home p{
 }
 .how-btn:hover{ background: rgba(17,8,12,.62); }
 
-/* Homepage leadership loop carousel sizing */
+/* Homepage leadership loop carousel sizing aligned with Programs carousel */
 .page-home .section .how-carousel{
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 .page-home .section .how-carousel .how-slide{
-  aspect-ratio: 16 / 8;
-  max-height: 300px;
+  aspect-ratio: 16 / 9;
+  max-height: none;
   object-fit: contain;
   object-position: center;
   background: rgba(255,255,255,.82);
