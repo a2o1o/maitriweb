@@ -152,6 +152,15 @@ nav a.active{ color: var(--ink); background: rgba(131,60,77,.12); }
   background: linear-gradient(135deg, rgba(242,185,155,.92), rgba(132,182,200,.78));
   color: #1b2024;
 }
+.btn-outline{
+  border-color: rgba(36,22,27,.35);
+  background: transparent;
+  color: var(--ink);
+}
+.btn-outline:hover{
+  border-color: rgba(36,22,27,.6);
+  background: rgba(36,22,27,.08);
+}
 .btn.ghost{
   background: transparent;
   box-shadow: none;
