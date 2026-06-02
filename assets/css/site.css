@@ -908,6 +908,68 @@ body.page-home p{
   flex-wrap: wrap;
 }
 
+.trust-split{
+  align-items: start;
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, .75fr);
+}
+.bank-details{
+  margin: 12px 0 8px;
+  display: grid;
+  gap: 0;
+}
+.bank-details div{
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(36,22,27,.08);
+}
+.bank-details dt{
+  font-family: "Open Sans", sans-serif;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: rgba(36,22,27,.56);
+}
+.bank-details dd{
+  margin: 0;
+  font-weight: 700;
+  font-size: 13.5px;
+  color: rgba(36,22,27,.88);
+}
+.qr-card{
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.82);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+.qr-card h3{
+  margin: 6px 0 10px;
+  font-size: 16px;
+}
+.qr-card img{
+  width: min(100%, 180px);
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(36,22,27,.1);
+}
+.qr-card .qr-thumb{
+  width: 140px !important;
+  height: 140px !important;
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: cover;
+}
+.qr-card p{
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(36,22,27,.7);
+}
+
 /* Footer */
 footer{
   padding: 28px 0 40px;
@@ -1570,6 +1632,8 @@ html.js .reveal.in{
     flex-direction: column;
     text-align: center;
   }
+  .bank-details div{ grid-template-columns: 1fr; gap: 4px; }
+  .qr-card img{ width: min(100%, 180px); }
   .loop-arrow{ display: none; }
   .hero-bleed::before{
     background-size: auto, auto, auto, auto, cover;
