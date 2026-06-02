@@ -1660,6 +1660,102 @@ footer{
   margin-top: 6px;
 }
 
+/* Impact report archive */
+.impact-archive-section{
+  position: relative;
+}
+.archive-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.archive-card{
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid rgba(36,22,27,.10);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(520px 260px at 0% 0%, rgba(208,64,112,.14), transparent 58%),
+    radial-gradient(420px 220px at 100% 100%, rgba(106,167,200,.12), transparent 56%),
+    linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,248,251,.86));
+  box-shadow: var(--shadow-soft);
+}
+.archive-card--feature{
+  min-height: 340px;
+  background:
+    radial-gradient(700px 320px at -10% -10%, rgba(208,64,112,.18), transparent 58%),
+    radial-gradient(520px 260px at 110% 110%, rgba(106,167,200,.16), transparent 55%),
+    linear-gradient(135deg, rgba(255,255,255,.98), rgba(255,241,247,.88));
+}
+.archive-card--video{
+  background:
+    radial-gradient(480px 220px at 0% 100%, rgba(106,167,200,.16), transparent 58%),
+    radial-gradient(420px 220px at 110% 0%, rgba(242,185,155,.16), transparent 56%),
+    linear-gradient(180deg, rgba(255,255,255,.94), rgba(247,252,255,.86));
+}
+.archive-year{
+  width: fit-content;
+  padding: 8px 13px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-weight: 800;
+  letter-spacing: .04em;
+  box-shadow: 0 14px 28px rgba(36,22,27,.12);
+}
+.archive-body{
+  margin-top: 18px;
+}
+.archive-body h3{
+  margin: 8px 0 8px;
+  max-width: 620px;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.22;
+}
+.archive-body p{
+  margin: 0;
+  max-width: 68ch;
+  color: rgba(36,22,27,.72);
+  font-size: 14px;
+}
+.archive-card--feature .archive-body p{
+  font-size: 14px;
+}
+.archive-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.archive-tags span{
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border: 1px solid rgba(36,22,27,.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  color: rgba(36,22,27,.72);
+  font-size: 12px;
+  font-weight: 700;
+}
+.archive-action{
+  margin-top: 22px;
+}
+.archive-note{
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(36,22,27,.08);
+  border-radius: 14px;
+  background: rgba(255,255,255,.70);
+  color: rgba(36,22,27,.66);
+  font-size: 13px;
+}
+
 /* Animations */
 .reveal{
   /* Progressive enhancement: content must remain readable even if JS fails. */
@@ -1691,6 +1787,9 @@ html.js .reveal.in{
   .support-card{ min-height: auto; }
   .payment-panel{ grid-template-columns: 1fr; }
   .bank-details--compact{ grid-template-columns: 1fr; }
+  .archive-grid{ grid-template-columns: 1fr; }
+  .archive-card,
+  .archive-card--feature{ min-height: auto; }
   .footgrid{ grid-template-columns: 1fr; }
   .footlinks{ justify-content: start; }
   nav{ display: none; }
