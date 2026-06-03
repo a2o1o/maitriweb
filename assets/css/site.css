@@ -1691,6 +1691,41 @@ footer{
   background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,247,252,.82));
 }
 
+.team-intro{
+  display: grid;
+  gap: 14px;
+  margin: -4px 0 18px;
+  padding: 18px 20px;
+  border: 1px solid rgba(36,22,27,.10);
+  border-radius: 22px;
+  background:
+    radial-gradient(520px 220px at 100% 0%, rgba(106,167,200,.12), transparent 58%),
+    rgba(255,255,255,.78);
+  box-shadow: var(--shadow-soft);
+}
+.team-intro p{
+  margin: 0;
+  max-width: 86ch;
+  color: rgba(36,22,27,.76);
+  line-height: 1.68;
+}
+.team-values{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.team-values span{
+  display: inline-flex;
+  padding: 8px 11px;
+  border: 1px solid rgba(36,22,27,.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  color: rgba(36,22,27,.70);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+
 /* Impact metrics animation helpers */
 .metric{
   display: flex;
