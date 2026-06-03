@@ -85,10 +85,10 @@ sup.ai-sup{
   height: 52px;
   display: block;
   object-fit: contain;
-  border-radius: 0;
+  border-radius: 50%;
   background: transparent;
   box-shadow: none;
-  filter: drop-shadow(0 10px 18px rgba(26,22,18,.12));
+  filter: none;
 }
 .brand-title{
   font-family: "Open Sans", sans-serif;
@@ -720,6 +720,10 @@ body.page-home p{
   font-size: 16px;
   line-height: 1.66;
   font-weight: 400;
+}
+body.page-home .mark{
+  mix-blend-mode: multiply;
+  opacity: .96;
 }
 
 /* Home: What is Maitri / Vision / Mission styling */
