@@ -1894,22 +1894,6 @@ footer{
 .feature-link-card .cta{
   margin-top: 16px;
 }
-.feature-link-media{
-  flex: 0 0 min(42%, 420px);
-  margin: 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid rgba(116,58,83,.14);
-  box-shadow: var(--shadow-soft);
-  background: #fff;
-}
-.feature-link-media img{
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center 52%;
-}
 
 /* Team grid (2x2) */
 .grid4{
@@ -2256,10 +2240,6 @@ html.js .reveal.in{
     align-items: flex-start;
   }
   .feature-link-card > div{
-    width: 100%;
-  }
-  .feature-link-media{
-    flex-basis: auto;
     width: 100%;
   }
   .casebook-grid{ grid-template-columns: 1fr; }
