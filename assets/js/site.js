@@ -11,6 +11,21 @@
     });
   }
 
+  document.querySelectorAll('[data-copy-email]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const email = btn.getAttribute('data-copy-email') || '';
+      if (!email) return;
+      try {
+        await navigator.clipboard.writeText(email);
+        const old = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => { btn.textContent = old; }, 1400);
+      } catch {
+        window.prompt('Copy email address', email);
+      }
+    });
+  });
+
   const path = (location.pathname || '').toLowerCase();
   const file = path.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a[data-nav]').forEach((a) => {
