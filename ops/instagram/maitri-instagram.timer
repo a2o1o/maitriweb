@@ -1,0 +1,10 @@
+[Unit]
+Description=Update Maitri Instagram Monday and Thursday at 09:00 IST
+
+[Timer]
+OnCalendar=Mon,Thu *-*-* 09:00:00 Asia/Kolkata
+Persistent=true
+Unit=maitri-instagram.service
+
+[Install]
+WantedBy=timers.target

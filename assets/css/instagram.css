@@ -1,0 +1,12 @@
+#latest-from-maitri { scroll-margin-top: 100px; }
+#latest-from-maitri .section-head { flex-wrap: wrap; gap: 18px; }
+#latest-from-maitri a { overflow-wrap: anywhere; }
+.instagram-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.instagram-grid[hidden] { display: none; }
+.instagram-post { min-width: 0; color: inherit; text-decoration: none; }
+.instagram-post:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 5px; }
+.instagram-post img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; background: #f3f5f4; border-radius: 6px; }
+.instagram-post p { margin: 12px 0 8px; line-height: 1.5; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.instagram-post time { font-size: 13px; color: #59635f; }
+@media (max-width: 760px) { .instagram-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
+@media (max-width: 440px) { .instagram-grid { grid-template-columns: minmax(0, 1fr); } }

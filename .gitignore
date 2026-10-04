@@ -4,3 +4,6 @@ _gcloud_ssh/
 *.tmp
 Thumbs.db
 .DS_Store
+assets/data/instagram/*
+!assets/data/instagram/.gitkeep
+__pycache__/

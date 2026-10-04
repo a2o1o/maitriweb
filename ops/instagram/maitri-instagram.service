@@ -1,0 +1,18 @@
+[Unit]
+Description=Refresh Maitri Instagram feed
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/var/lib/maitri-instagram/credentials.json
+
+[Service]
+Type=oneshot
+User=maitri-instagram
+Group=maitri-instagram
+ExecStart=/usr/bin/python3 /opt/maitri-instagram/sync.py
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/maitri-instagram /var/www/maitriweb/assets/data/instagram
+TimeoutStartSec=5min
+
