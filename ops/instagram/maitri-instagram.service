@@ -15,4 +15,3 @@ ProtectSystem=strict
 ProtectHome=true
 ReadWritePaths=/var/lib/maitri-instagram /var/www/maitriweb/assets/data/instagram
 TimeoutStartSec=5min
-
