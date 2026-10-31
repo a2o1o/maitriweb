@@ -1,51 +1,24 @@
-# Maitri Website (Static Site)
+# Maitri Website
 
-This repo is a static, multi-page website intended to be served from a Google Cloud VM (nginx recommended).
+This directory is the website workspace. It is a static multi-page site with no
+build step. The current setup and pending work are in
+[PROJECT_HANDOFF.md](PROJECT_HANDOFF.md).
 
-## Local Preview
+- Production: https://www.maitriaspire.org
+- Repository: https://github.com/a2o1o/maitriweb
 
-From PowerShell:
+## Local preview
 
-```powershell
-cd C:\Users\anjgu\MaitriSite
-python -m http.server 8080
-```
+From `C:\Users\anjgu\MaitriSite`, run `python -m http.server 8080` and open
+`http://localhost:8080/index.html`. Use another port if 8080 is busy.
 
-Then open `http://localhost:8080`.
+## Main files
 
-## Deploy (Nginx Example)
-
-1. Copy the contents of this folder to your VM (e.g. `/var/www/maitri`).
-2. Configure nginx to serve that directory.
-
-Example server block (adjust domain + paths):
-
-```nginx
-server {
-  listen 80;
-  server_name maitriaspire.org www.maitriaspire.org;
-
-  root /var/www/maitri;
-  index index.html;
-
-  location / {
-    try_files $uri $uri/ =404;
-  }
-}
-```
-
-## Editing Content
-
-Pages:
-- `index.html` (Home)
-- `programs.html`
-- `impact.html`
-- `sakhi.html`
-- `partners.html`
-- `donate.html`
-- `recognition.html`
-- `contact.html`
-
-Global styles: `assets/css/site.css`  
-Global JS: `assets/js/site.js`
+- `index.html`: homepage
+- `impact.html`: stories and reports
+- `programs.html`, `partners.html`, `sakhi.html`, `donate.html`,
+  `contact.html`: other main pages
+- `assets/css/site.css`, `assets/js/site.js`: shared styling and behavior
+- `assets/css/instagram.css`, `assets/js/instagram.js`: Instagram section
+- `ops/instagram/README.md`: Instagram connection and timer setup
 

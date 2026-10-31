@@ -1,5 +1,6 @@
 _shots/
 _gcloud_ssh/
+_gcloud_tmp_ssh*
 *.log
 *.tmp
 Thumbs.db

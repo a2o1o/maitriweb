@@ -1,5 +1,9 @@
 # Maitri Web (Static Site) - Developer Notes
 
+For current deployment details, recent work, and outstanding Instagram setup,
+read `PROJECT_HANDOFF.md` first. The deployment section below is superseded by
+that file if VM names or paths differ.
+
 This repository is a static HTML/CSS/JS website deployed to a Google Cloud VM.
 There is no build step.
 
