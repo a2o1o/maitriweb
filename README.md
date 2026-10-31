@@ -21,4 +21,5 @@ From `C:\Users\anjgu\MaitriSite`, run `python -m http.server 8080` and open
 - `assets/css/site.css`, `assets/js/site.js`: shared styling and behavior
 - `assets/css/instagram.css`, `assets/js/instagram.js`: Instagram section
 - `ops/instagram/README.md`: Instagram connection and timer setup
+- `report-work/`: editable Maitri report source files and previews (local only)
 

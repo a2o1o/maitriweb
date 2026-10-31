@@ -56,6 +56,13 @@ manifest are under its `_site_candidates` directory. These are source
 materials outside the website repo; copy only selected assets into
 `assets/img/` when they are used on the site.
 
+Editable Maitri report decks, source files, previews, and the original
+quarterly PDF live in `report-work/` inside this workspace. This 1.54 GB
+working folder is ignored by Git and not served from `assets/`. To publish
+an updated report, export the intended PDF to `assets/reports/2026/`, check
+the link in `impact.html`, then commit and deploy only the public PDF/site
+changes. The currently published PDF remains in `assets/reports/2026/`.
+
 ## Working here in future chats
 
 Open `C:\Users\anjgu\MaitriSite` as the Codex project/workspace before
