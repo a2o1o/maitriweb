@@ -94,8 +94,11 @@
       if (prev) prev.addEventListener('click', () => { go(idx - 1); start(); });
       if (next) next.addEventListener('click', () => { go(idx + 1); start(); });
 
-      carousel.addEventListener('mouseenter', stop);
-      carousel.addEventListener('mouseleave', start);
+      // Community previews should keep moving even while the pointer is over them.
+      if (carousel.getAttribute('data-how-autoplay') !== 'continuous') {
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+      }
       carousel.addEventListener('focusin', stop);
       carousel.addEventListener('focusout', start);
 

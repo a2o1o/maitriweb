@@ -26,6 +26,9 @@ This file keeps the website context inside the project so a new chat opened at
   `data-how-carousel` styling and behaviour from `assets/js/site.js`: one full
   image at a time, automatic rotation, and previous/next arrows. There are no
   play/pause controls or separate carousel script.
+  The community carousel uses `data-how-autoplay="continuous"` to keep rotating
+  under the pointer (the other carousels retain their hover pause). Keyboard
+  focus still pauses rotation. Its linked slides are explicitly one frame wide.
   The calendar button links to an on-page enquiry panel with Gmail, email app,
   and copy-email options because its direct ordering URL was not verified.
   Updating these curated
