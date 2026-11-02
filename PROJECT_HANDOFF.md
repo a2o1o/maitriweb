@@ -20,6 +20,9 @@ This file keeps the website context inside the project so a new chat opened at
   The public copy is `assets/img/saijaya/community-gathering.jpg`; page-specific
   presentation is in `assets/css/saijaya.css`. The statements describe the Trust's
   purpose and aspirations, not verified impact totals.
+  The former "Maitri and Saijaya" block is removed. Contributions are presented
+  directly at `saijaya.html#contribute`, with labelled bank details, the existing
+  clean `saijaya-upi-qr.png` asset, and `nvvkaul@gmail.com` for Trust enquiries.
 
 - The dedicated `latest.html` page leads with October 2026 Instagram
   highlights: the 2027 calendar, enterprise stall at Times Now, Canvas of

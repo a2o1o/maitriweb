@@ -5,3 +5,23 @@
 .saijaya-purpose .vm-label { margin-top: 0; }
 .saijaya-purpose .vm-card p { font-size: 17px; line-height: 1.7; }
 @media (max-width: 760px) { .saijaya-purpose .vm-grid { grid-template-columns: minmax(0, 1fr); } }
+.saijaya-contribute { scroll-margin-top: 110px; }
+.saijaya-payment-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: stretch; }
+.saijaya-bank-card, .saijaya-upi-card { padding: clamp(24px, 4vw, 36px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-soft); }
+.saijaya-bank-card h3, .saijaya-upi-card h3 { font-size: 25px; margin: 8px 0 24px; line-height: 1.35; }
+.saijaya-bank-details { margin: 0; }
+.saijaya-bank-details > div { padding: 15px 0; border-bottom: 1px solid var(--line); }
+.saijaya-bank-details dt { color: var(--muted); font-size: 13px; margin-bottom: 5px; }
+.saijaya-bank-details dd { margin: 0; color: var(--ink); font-size: 18px; font-weight: 700; overflow-wrap: anywhere; }
+.saijaya-bank-details .saijaya-bank-number { font-size: 23px; font-variant-numeric: tabular-nums; letter-spacing: .025em; }
+.saijaya-payment-status { color: var(--muted); font-size: 14px; margin: 22px 0; }
+.saijaya-payment-contact { padding: 18px; border-radius: var(--radius); background: #fef4f6; overflow-wrap: anywhere; }
+.saijaya-payment-contact p { font-size: 14px; margin: 0 0 8px; }
+.saijaya-payment-contact a { font-weight: 700; }
+.saijaya-upi-card { text-align: center; background: #fffaf6; }
+.saijaya-qr-link { display: block; width: min(100%, 320px); margin: 0 auto; padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.saijaya-qr-link img { display: block; width: 100%; height: auto; }
+.saijaya-upi-id { margin: 20px 0 16px; font-size: 15px; overflow-wrap: anywhere; }
+.saijaya-upi-id strong { font-size: 13px; color: var(--muted); }
+.saijaya-contribute a:focus-visible { outline: 3px solid #833c4d; outline-offset: 4px; }
+@media (max-width: 760px) { .saijaya-payment-grid { grid-template-columns: minmax(0, 1fr); } }
