@@ -30,6 +30,11 @@ This file keeps the website context inside the project so a new chat opened at
   and copy-email options because its direct ordering URL was not verified.
   Updating these curated
   highlights is separate from the pending automatic Instagram feed connection.
+- `latest.html#debate-update` includes a dedicated Maitri Debate 2026 finale
+  feature based on Instagram post `DekK64fgRrB`, with a cover poster and an
+  expandable journey image. The displayed 16 October 2026 date is explicitly
+  the publication date; the post does not specify the event date. Images are
+  hosted as `assets/img/community/debate-2026-1.webp` and `debate-2026-2.webp`.
 
 - Testimonial photos have a square wrapper, `object-fit: cover`, and circular
   clipping in `assets/css/site.css` (`37b7463`).

@@ -70,6 +70,18 @@
 .community-photo-carousel { margin-top: 20px; }
 .community-photo-carousel .how-slide > img { display: block; width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: contain; }
 .community-photo-carousel a:focus-visible { outline: 3px solid #833c4d; outline-offset: -4px; }
+.community-debate { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 0; margin-top: 28px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-soft); }
+.community-debate-cover { display: flex; align-items: flex-start; background: #fae9e1; }
+.community-debate-cover img { display: block; width: 100%; height: auto; }
+.community-debate-copy { min-width: 0; padding: clamp(24px, 3vw, 36px); }
+.community-debate-copy h3 { margin: 12px 0 16px; font-size: 28px; line-height: 1.3; }
+.community-debate-copy p { font-size: 16px; color: var(--muted); }
+.community-debate-copy > a { display: inline-block; margin-top: 6px; font-weight: 700; }
+.community-debate-gallery { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
+.community-debate-gallery summary { cursor: pointer; font-weight: 700; }
+.community-debate-gallery img { display: block; width: 100%; height: auto; margin-top: 16px; border-radius: var(--radius); }
+.community-debate summary:focus-visible { outline: 3px solid #833c4d; outline-offset: 4px; }
+@media (max-width: 760px) { .community-debate { grid-template-columns: minmax(0, 1fr); } }
 .page-latest #latest-from-maitri article[id] { scroll-margin-top: 110px; }
 .calendar-enquiry { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 30px; margin-top: 28px; padding: clamp(24px, 4vw, 36px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff7ee; scroll-margin-top: 115px; }
 .calendar-enquiry:target { outline: 3px solid #833c4d; outline-offset: 5px; }
