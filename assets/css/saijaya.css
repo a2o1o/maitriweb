@@ -25,3 +25,9 @@
 .saijaya-upi-id strong { font-size: 13px; color: var(--muted); }
 .saijaya-contribute a:focus-visible { outline: 3px solid #833c4d; outline-offset: 4px; }
 @media (max-width: 760px) { .saijaya-payment-grid { grid-template-columns: minmax(0, 1fr); } }
+.saijaya-contact { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: clamp(24px, 4vw, 36px); margin-bottom: 48px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; scroll-margin-top: 110px; }
+.saijaya-contact-email { display: inline-block; margin-top: 12px; font-size: clamp(20px, 3vw, 26px); font-weight: 700; overflow-wrap: anywhere; }
+.saijaya-contact p { color: var(--muted); }
+.saijaya-contact-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; flex-shrink: 0; }
+.saijaya-contact a:focus-visible, .saijaya-contact button:focus-visible { outline: 3px solid #833c4d; outline-offset: 4px; }
+@media (max-width: 760px) { .saijaya-contact { flex-direction: column; align-items: flex-start; } .saijaya-contact-actions { width: 100%; } }

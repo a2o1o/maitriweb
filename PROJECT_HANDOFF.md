@@ -25,6 +25,8 @@ This file keeps the website context inside the project so a new chat opened at
   clean `saijaya-upi-qr.png` asset, and `nvvkaul@gmail.com` for Trust enquiries.
   The Maitri footer and its Partner, Support, Voices, Contact, and Instagram
   footer buttons are removed from this page at the user's request.
+  Its hero Contact button scrolls to `#contact`, a "Write to email" section
+  showing `nvvkaul@gmail.com` with Gmail, email app, and copy-email options.
 
 - The dedicated `latest.html` page leads with October 2026 Instagram
   highlights: the 2027 calendar, enterprise stall at Times Now, Canvas of
