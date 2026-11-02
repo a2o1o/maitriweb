@@ -1,0 +1,7 @@
+.saijaya-community-photo { margin: 0 0 34px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-soft); }
+.saijaya-community-photo img { display: block; width: 100%; height: auto; }
+.saijaya-community-photo figcaption { padding: 14px 22px; font-size: 14px; color: var(--muted); }
+.saijaya-purpose .vm-grid { align-items: stretch; }
+.saijaya-purpose .vm-label { margin-top: 0; }
+.saijaya-purpose .vm-card p { font-size: 17px; line-height: 1.7; }
+@media (max-width: 760px) { .saijaya-purpose .vm-grid { grid-template-columns: minmax(0, 1fr); } }

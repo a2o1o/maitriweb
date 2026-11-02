@@ -15,6 +15,12 @@ This file keeps the website context inside the project so a new chat opened at
 
 ## Recent website work
 
+- `saijaya.html` includes the user-provided mission and vision statements and
+  the group photograph from `saijaya/WhatsApp Image 2026-11-02 at 5.02.23 PM.jpeg`.
+  The public copy is `assets/img/saijaya/community-gathering.jpg`; page-specific
+  presentation is in `assets/css/saijaya.css`. The statements describe the Trust's
+  purpose and aspirations, not verified impact totals.
+
 - The dedicated `latest.html` page leads with October 2026 Instagram
   highlights: the 2027 calendar, enterprise stall at Times Now, Canvas of
   Aspirations 3.0, and KARM Conclave. Earlier July-September stories are in an
