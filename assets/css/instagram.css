@@ -38,3 +38,29 @@
   .community-news-grid { grid-template-columns: minmax(0, 1fr); }
   .community-news-body { padding: 22px; }
 }
+
+.community-feature { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); overflow: hidden; margin-bottom: 26px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff7ee; box-shadow: var(--shadow-soft); }
+.community-feature-photo { display: flex; align-items: center; background: #f3e8dc; }
+.community-feature-photo img { display: block; width: 100%; height: auto; }
+.community-feature-copy { padding: clamp(24px, 3vw, 38px); }
+.community-feature-copy h3 { margin: 12px 0 14px; font-size: clamp(28px, 3vw, 38px); font-weight: 700; line-height: 1.2; letter-spacing: -.025em; }
+.community-feature-copy p { color: var(--muted); font-size: 16px; margin: 12px 0; }
+.community-feature-copy .community-feature-name { font-weight: 700; color: var(--ink); }
+.community-feature-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 22px; }
+.community-feature-actions .under { font-size: 14px; font-weight: 700; }
+.community-news-media { display: block; background: #f5edf2; }
+.community-news-grid--october .community-news-image { aspect-ratio: 4 / 5; object-fit: contain; }
+.community-story-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; margin-top: auto; font-size: 14px; font-weight: 700; }
+.community-story-actions .btn { text-align: center; font-size: 14px; }
+.community-source-note { margin: 20px 0 28px; color: var(--muted); font-size: 13px; }
+.community-archive { padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.community-archive summary { cursor: pointer; font-size: 18px; font-weight: 700; }
+.community-archive summary span { display: inline-block; margin-left: 10px; color: var(--muted); font-size: 14px; font-weight: 400; }
+.community-archive[open] > .community-news-grid { margin-top: 22px; }
+.community-archive .community-news-footer { padding-bottom: 0; border: 0; }
+.community-archive summary:focus-visible { outline: 3px solid #833c4d; outline-offset: 5px; }
+@media (max-width: 760px) {
+  .community-feature { grid-template-columns: minmax(0, 1fr); }
+  .community-feature-photo img { max-height: 360px; object-fit: contain; }
+  .community-archive summary span { display: block; margin: 6px 0 0 20px; }
+}

@@ -15,6 +15,15 @@ This file keeps the website context inside the project so a new chat opened at
 
 ## Recent website work
 
+- The homepage's "Latest from Maitri" section leads with October 2026 Instagram
+  highlights: the 2027 calendar, enterprise stall at Times Now, Canvas of
+  Aspirations 3.0, and KARM Conclave. Earlier July-September stories are in an
+  expandable archive. Content is static HTML in `index.html`, styled in
+  `assets/css/instagram.css`; images are hosted in `assets/img/community/`.
+  Each update links to its source post. The calendar uses an email enquiry CTA
+  because its direct ordering URL was not verified. Updating these curated
+  highlights is separate from the pending automatic Instagram feed connection.
+
 - Testimonial photos have a square wrapper, `object-fit: cover`, and circular
   clipping in `assets/css/site.css` (`37b7463`).
 - The April-June 2026 quarterly PDF is in `assets/reports/2026/` and linked
