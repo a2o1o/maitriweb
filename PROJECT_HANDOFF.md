@@ -22,9 +22,10 @@ This file keeps the website context inside the project so a new chat opened at
   `assets/css/instagram.css`; images are hosted in `assets/img/community/`.
   Each update links to its source post. "Latest from Maitri" is in the primary
   navigation across all pages; the homepage has a compact four-image carousel
-  linking to the individual updates. `assets/js/latest-carousel.js` advances it
-  every six seconds while visible, pauses during interaction, and respects
-  reduced-motion preferences. Previous/next and pause/play controls are provided.
+  linking to the individual updates. It reuses the Leadership Loop's
+  `data-how-carousel` styling and behaviour from `assets/js/site.js`: one full
+  image at a time, automatic rotation, and previous/next arrows. There are no
+  play/pause controls or separate carousel script.
   The calendar button links to an on-page enquiry panel with Gmail, email app,
   and copy-email options because its direct ordering URL was not verified.
   Updating these curated
