@@ -67,6 +67,25 @@
 
 .latest-preview { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: clamp(24px, 4vw, 38px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-soft); }
 .latest-preview .btn { flex-shrink: 0; text-align: center; }
+.latest-carousel { margin-top: 20px; }
+.latest-carousel-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding: 2px 2px 14px; }
+.latest-slide { flex: 0 0 calc((100% - 20px) / 2); min-width: 0; scroll-snap-align: start; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: #fff; }
+.latest-slide > img { display: block; width: 100%; height: 280px; object-fit: contain; background: #f6eef2; }
+.latest-slide > div { padding: 18px 22px; }
+.latest-slide h3 { margin: 6px 0; font-size: 21px; line-height: 1.4; }
+.latest-slide p { margin: 0; font-size: 15px; color: var(--muted); }
+.latest-slide:focus-visible { outline: 3px solid #833c4d; outline-offset: -4px; }
+.latest-carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 10px; }
+.latest-carousel-controls[hidden] { display: none; }
+.latest-carousel-controls > div { display: flex; gap: 8px; }
+.latest-carousel-controls .btn { min-width: 44px; min-height: 44px; cursor: pointer; }
+.latest-carousel-controls button:focus-visible { outline: 3px solid #833c4d; outline-offset: 3px; }
+.page-latest #latest-from-maitri article[id] { scroll-margin-top: 110px; }
+@media (max-width: 760px) {
+  .latest-slide { flex-basis: 88%; }
+  .latest-slide > img { height: 250px; }
+  .latest-carousel-controls { align-items: flex-start; flex-direction: column; }
+}
 .calendar-enquiry { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 30px; margin-top: 28px; padding: clamp(24px, 4vw, 36px); border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff7ee; scroll-margin-top: 115px; }
 .calendar-enquiry:target { outline: 3px solid #833c4d; outline-offset: 5px; }
 .calendar-enquiry h3 { margin: 8px 0 12px; font-size: 24px; line-height: 1.4; }

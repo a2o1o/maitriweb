@@ -21,7 +21,10 @@ This file keeps the website context inside the project so a new chat opened at
   expandable archive. Content is static HTML in `latest.html`, styled in
   `assets/css/instagram.css`; images are hosted in `assets/img/community/`.
   Each update links to its source post. "Latest from Maitri" is in the primary
-  navigation across all pages; the homepage has only a short preview and link.
+  navigation across all pages; the homepage has a compact four-image carousel
+  linking to the individual updates. `assets/js/latest-carousel.js` advances it
+  every six seconds while visible, pauses during interaction, and respects
+  reduced-motion preferences. Previous/next and pause/play controls are provided.
   The calendar button links to an on-page enquiry panel with Gmail, email app,
   and copy-email options because its direct ordering URL was not verified.
   Updating these curated
