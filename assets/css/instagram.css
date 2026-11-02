@@ -10,3 +10,31 @@
 .instagram-post time { font-size: 13px; color: #59635f; }
 @media (max-width: 760px) { .instagram-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
 @media (max-width: 440px) { .instagram-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Dated, editorial community highlights remain available without the social feed. */
+.community-period { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 24px 0 18px; font-size: 14px; color: var(--muted); }
+.community-news-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.community-news-card { min-width: 0; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-soft); }
+.community-news-image { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.community-news-image--poster { object-fit: contain; background: #b77dcc; }
+.community-news-body { flex: 1; display: flex; flex-direction: column; padding: 24px; }
+.community-news-body h3 { font-size: 21px; font-weight: 700; line-height: 1.4; margin: 10px 0; }
+.community-news-body p { font-size: 16px; color: var(--muted); margin: 0 0 22px; }
+.community-news-body > a { margin-top: auto; font-size: 15px; font-weight: 700; }
+.community-news-spotlight { aspect-ratio: 16 / 9; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 22px; background: linear-gradient(135deg, #733955, #554674); color: #fff; }
+.community-news-spotlight span { font-size: 12px; letter-spacing: .04em; }
+.community-news-spotlight strong { font-size: clamp(24px, 2.5vw, 32px); line-height: 1.2; }
+.community-news-footer { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-top: 22px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+.community-news-footer p { font-size: 14px; color: var(--muted); max-width: 640px; margin: 0; }
+.community-news-footer a { flex-shrink: 0; font-size: 14px; font-weight: 700; }
+.community-social-heading { margin: 26px 0 18px; }
+.community-social-heading h3 { font-size: 20px; margin: 0 0 8px; }
+#latest-from-maitri a:focus-visible { outline: 3px solid #833c4d; outline-offset: 4px; }
+@media (max-width: 900px) {
+  .community-news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .community-news-footer { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .community-news-grid { grid-template-columns: minmax(0, 1fr); }
+  .community-news-body { padding: 22px; }
+}
